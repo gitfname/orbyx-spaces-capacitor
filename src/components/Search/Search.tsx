@@ -10,7 +10,7 @@ const containerVariants = cva(
 )
 
 const searchFieldVariants = cva(
-    `w-full text-sm font-medium outline-none px-3.5 py-3 border rounded-3xl`,
+    `w-full text-sm font-medium outline-none px-5 py-3 border rounded-3xl`,
     {
         variants: {
             colorSchema: {

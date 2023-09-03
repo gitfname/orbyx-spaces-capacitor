@@ -34,5 +34,5 @@
 
 * {
     font-family: 'Poppins', sans-serif;
-    @apply text-[14px] xl:text-[16px] 2xl:text-[18px];
+    @apply text-[13px] xl:text-[16px] 2xl:text-[18px];
 }

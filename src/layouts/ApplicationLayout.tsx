@@ -10,7 +10,7 @@ function ApplicationLayout({children}: Props) {
   return (
     <div
         className="w-full h-screen overflow-hidden grid
-        grid-cols-1 grid-rows-[3.6rem_calc(100%-3.6rem)]"
+        grid-cols-1 grid-rows-[4.4rem_calc(100%-4.4rem)]"
     >
 
         {/* navbar */}
@@ -20,7 +20,7 @@ function ApplicationLayout({children}: Props) {
 
 
         {/* main section */}
-        <div className="overflow-y-auto">
+        <div className="overflow-y-auto p-4">
             {children}
         </div>
 

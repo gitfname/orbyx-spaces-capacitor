@@ -4,15 +4,16 @@ import ApplicationLayout from "./layouts/ApplicationLayout";
 import { HomePage } from "./pages/Home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import MainLayout from "./layouts/MainLayout";
 
 
 function App() {
 
-  const [ _, i18n ] = useTranslation()
+  const [_, i18n] = useTranslation()
 
   useEffect(
     () => {
-      if(i18n.dir(i18n.language) === "rtl") {
+      if (i18n.dir(i18n.language) === "rtl") {
         document.body.setAttribute("dir", "rtl")
       }
       else {
@@ -21,25 +22,27 @@ function App() {
     },
     [i18n.language]
   )
-  
+
   return (
-    <ApplicationLayout>
+    <MainLayout>
+      <ApplicationLayout>
 
-      <Routes>
+        <Routes>
 
-        <Route
-          path="/"
-          element={<HomePage />}
-        />
+          <Route
+            path="/"
+            element={<HomePage />}
+          />
 
-        <Route
-          path="about"
-          element={<div>About page</div>}
-        />
+          <Route
+            path="about"
+            element={<div>About page</div>}
+          />
 
-      </Routes>
+        </Routes>
 
-    </ApplicationLayout>
+      </ApplicationLayout>
+    </MainLayout>
 
   )
 }

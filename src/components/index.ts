@@ -6,6 +6,7 @@ import Search from "./Search";
 import { FileCard1, FileCard2 } from "./File";
 import { DetailCard1, DetailCard2 } from "./Detail";
 import { FolderCard1 } from "./Folder";
+import InviteFriend from "./InviteFriend";
 
 export {
     Text,
@@ -16,5 +17,6 @@ export {
     Search,
     FileCard1, FileCard2,
     DetailCard1, DetailCard2,
-    FolderCard1
+    FolderCard1,
+    InviteFriend
 }

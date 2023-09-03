@@ -4,7 +4,7 @@ import { HTMLAttributes, ReactNode } from "react"
 import { twMerge } from "tailwind-merge"
 
 const variants = cva(
-  `text-slate-800 font-normal tracking-wide`,
+  `text-slate-800 font-normal`,
   {
     variants: {
       size: {

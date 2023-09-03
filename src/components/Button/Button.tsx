@@ -4,7 +4,7 @@ import { HTMLAttributes, ReactNode } from "react"
 import { twMerge } from "tailwind-merge"
 
 const variants = cva(
-    `w-full py-2.5 px-3.5 font-medium text-sm rounded-3xl flex items-center justify-center gap-x-3 text-center
+    `w-full py-2.5 px-4 font-medium text-sm rounded-3xl flex items-center justify-center gap-x-3 text-center
     shadow-md shadow-black/5 active:scale-95 transition-all duration-200`,
     {
         variants: {

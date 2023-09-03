@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@fseehawer/react-circular-slider": "^2.6.1",
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.0.5",
     "ahooks": "^3.7.8",
