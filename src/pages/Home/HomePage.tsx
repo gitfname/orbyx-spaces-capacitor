@@ -1,5 +1,5 @@
 
-import { Button, DetailCard1, FolderCard1, InviteFriend, Text } from "../../components"
+import { Button, DetailCard1, FolderCard1, Text } from "../../components"
 import getBaseUrl from "../../utils/base-url"
 import CircularSLider from "@fseehawer/react-circular-slider"
 import { AiOutlinePlus } from "react-icons/ai"

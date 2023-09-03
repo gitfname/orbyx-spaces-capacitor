@@ -1,6 +1,6 @@
 
 import { cva, type VariantProps } from "class-variance-authority"
-import { HTMLAttributes, ReactNode } from "react"
+import { HTMLAttributes } from "react"
 import { twMerge } from "tailwind-merge"
 import getBaseUrl from "../../../utils/base-url"
 import { Text } from "../.."

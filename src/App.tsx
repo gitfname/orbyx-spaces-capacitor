@@ -5,6 +5,8 @@ import { HomePage } from "./pages/Home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
+import { ApplicationRoutes } from "./routes";
+import { Documents } from "./pages";
 
 
 function App() {
@@ -26,19 +28,18 @@ function App() {
   return (
     <MainLayout>
       <ApplicationLayout>
-
         <Routes>
 
           <Route
-            path="/"
+            path={ApplicationRoutes.pages.dashboard}
             element={<HomePage />}
           />
 
           <Route
-            path="about"
-            element={<div>About page</div>}
+            path={ApplicationRoutes.pages.documents}
+            element={<Documents />}
           />
-
+          
         </Routes>
 
       </ApplicationLayout>

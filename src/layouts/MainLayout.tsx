@@ -2,6 +2,8 @@
 import { ReactNode } from "react"
 import { Button, Text } from "../components"
 import getBaseUrl from "../utils/base-url"
+import { Link } from "react-router-dom"
+import { ApplicationRoutes } from "../routes"
 
 interface Props {
     children: ReactNode
@@ -24,13 +26,27 @@ function MainLayout({ children }: Props) {
                     <Text size="head4">OrbyxSpaces</Text>
                 </div>
 
+                <Link
+                    to={ApplicationRoutes.pages.dashboard}
+                >
+                    <Button className="py-3 justify-start">
+                        <div className="w-7">
+                            <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Dashboard-White.png"} className="w-5 h-5" />
+                        </div>
+                        Dashboard
+                    </Button>
+                </Link>
 
-                <Button className="py-3 justify-start">
-                    <div className="w-7">
-                        <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Dashboard-White.png"} className="w-5 h-5" />
-                    </div>
-                    Dashboard
-                </Button>
+                <Link
+                    to={ApplicationRoutes.pages.documents}
+                >
+                    <Button className="py-3 shadow-none text-brand-1 hover:bg-brand hover:text-white justify-start" colorSchema="ghost">
+                        <div className="w-7">
+                            <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Image.png"} className="w-5 h-5" />
+                        </div>
+                        Documents
+                    </Button>
+                </Link>
 
                 <Button className="py-3 shadow-none text-brand-1 hover:bg-brand hover:text-white justify-start" colorSchema="ghost">
                     <div className="w-7">

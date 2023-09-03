@@ -1,5 +1,4 @@
 
-import { Link } from "react-router-dom"
 import { MobileMenu } from "../MobileMenu"
 import { Button, Search, Text } from "../../components"
 import getBaseUrl from "../../utils/base-url"

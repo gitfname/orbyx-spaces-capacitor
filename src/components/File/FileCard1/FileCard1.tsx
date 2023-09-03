@@ -1,7 +1,7 @@
 
 
 import { cva, type VariantProps } from "class-variance-authority"
-import { HTMLAttributes } from "react"
+import React, { AllHTMLAttributes, HTMLAttributes, ReactElement, ReactHTMLElement, ReactNode } from "react"
 import { twMerge } from "tailwind-merge"
 import { FileOptions } from "../../../types"
 import { Text } from "../.."
@@ -18,11 +18,13 @@ const variants = cva(
 )
 
 interface Props extends HTMLAttributes<HTMLDivElement>, VariantProps<typeof variants> {
-    data: FileOptions
+    data: FileOptions;
+    imgWrapper?: ReactElement;
+    imgClassName?: string;
 }
 
 
-function FileCard1({ data, className, colorSchema, ...props }: Props) {
+function FileCard1({ data, className, colorSchema, imgWrapper, imgClassName, ...props }: Props) {
     return (
         <div
             className={twMerge(variants({ className, colorSchema }))}
@@ -32,11 +34,33 @@ function FileCard1({ data, className, colorSchema, ...props }: Props) {
             <div
                 className="flex items-center gap-x-3"
             >
-                <img
-                    alt=""
-                    src={data.img}
-                    className="w-12 h-12 rounded-full object-center object-cover"
-                />
+                {
+                    imgWrapper
+                        ?
+                        React.cloneElement(imgWrapper, {}, <>
+                            {
+                                typeof data.img === "string"
+                                    ?
+                                    <img
+                                        alt=""
+                                        src={data.img}
+                                        className={twMerge("w-12 h-12 rounded-full object-center object-cover", imgClassName)}
+                                    />
+                                    :
+                                    data.img
+                            }
+                        </>)
+                        :
+                        typeof data.img === "string"
+                            ?
+                            <img
+                                alt=""
+                                src={data.img}
+                                className={twMerge("w-12 h-12 rounded-full object-center object-cover", imgClassName)}
+                            />
+                            :
+                            data.img
+                }
 
                 <div className="flex flex-col gap-y-1">
                     <Text size="subtitle2" className={`text-brand-4 ${colorSchema === "dark" ? "text-brand-3" : ""}`}>
