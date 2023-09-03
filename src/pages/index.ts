@@ -5,6 +5,7 @@ import Profile from "./Profile";
 import RecentFiles from "./RecentFiles";
 import InviteFriend from "./InviteFriend";
 import Trash from "./Trash";
+import History from "./History";
 
 export {
     Documents,
@@ -12,5 +13,6 @@ export {
     Profile,
     RecentFiles,
     InviteFriend,
-    Trash
+    Trash,
+    History
 }

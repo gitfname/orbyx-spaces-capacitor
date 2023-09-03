@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import { ApplicationRoutes } from "./routes";
-import { Documents, Images, Profile, RecentFiles, InviteFriend, Trash } from "./pages";
+import { Documents, Images, Profile, RecentFiles, InviteFriend, Trash, History } from "./pages";
 import VideoAudio from "./pages/VideoAudio";
 
 
@@ -69,6 +69,11 @@ function App() {
           <Route
             path={ApplicationRoutes.pages.trashBin}
             element={<Trash />}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.history}
+            element={<History />}
           />
 
         </Routes>

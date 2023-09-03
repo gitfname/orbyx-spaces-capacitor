@@ -58,7 +58,7 @@ const links = [
     {
         id: "settings-link-5",
         text: "History",
-        link: ApplicationRoutes.pages.documents,
+        link: ApplicationRoutes.pages.history,
         icon: <div className="w-8 h-8 rounded-full bg-accent-blue grid place-items-center">
             <img
                 alt=""

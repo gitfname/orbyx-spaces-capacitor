@@ -9,6 +9,7 @@ export const ApplicationRoutes = {
         profile: "/settings/account",
         recentFiles: "/settings/recent-files",
         inviteFriend: "/settings/invite-friend",
-        trashBin: "/settings/trash"
+        trashBin: "/settings/trash",
+        history: "/settings/history"
     }
 }
