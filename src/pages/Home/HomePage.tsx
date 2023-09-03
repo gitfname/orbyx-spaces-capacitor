@@ -1,5 +1,5 @@
 
-import { Button, DetailCard1, DetailCard2, FileCard1, FileCard2, InputField, Search, TextField } from "../../components"
+import { Button, DetailCard1, DetailCard2, FileCard1, FileCard2, FolderCard1, InputField, Search, TextField } from "../../components"
 import { AiOutlineHome } from "react-icons/ai"
 import getBaseUrl from "../../utils/base-url"
 
@@ -64,6 +64,13 @@ function HomePage() {
         subtitle="5 Mins Remaining"
         className="w-max"
         value={33}
+      />
+
+      <FolderCard1
+        className="mt-12 w-52"
+        size="12 GB"
+        name="Documentsand"
+        lastUpdateTime="2023/10/11 - 15:53"
       />
     </div>
   )
