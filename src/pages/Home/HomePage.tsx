@@ -1,5 +1,5 @@
 
-import { Button, InputField, PasswordField, TextField } from "../../components"
+import { Button, InputField, Search, TextField } from "../../components"
 import { AiOutlineHome } from "react-icons/ai"
 
 
@@ -14,6 +14,8 @@ function HomePage() {
       <InputField labelText="name">
         <TextField placeholder="Enter your name" className="outline-none" />
       </InputField>
+
+      <Search searchFieldAttrs={{placeholder: "hello world", defaultValue: "search for anything"}}  />
     </div>
   )
 }
