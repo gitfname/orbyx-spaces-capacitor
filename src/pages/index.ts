@@ -4,11 +4,13 @@ import Images from "./Images";
 import Profile from "./Profile";
 import RecentFiles from "./RecentFiles";
 import InviteFriend from "./InviteFriend";
+import Trash from "./Trash";
 
 export {
     Documents,
     Images,
     Profile,
     RecentFiles,
-    InviteFriend
+    InviteFriend,
+    Trash
 }

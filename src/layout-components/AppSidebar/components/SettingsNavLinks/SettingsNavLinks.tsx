@@ -46,7 +46,7 @@ const links = [
     {
         id: "settings-link-4",
         text: "Trash bin",
-        link: ApplicationRoutes.pages.documents,
+        link: ApplicationRoutes.pages.trashBin,
         icon: <div className="w-8 h-8 rounded-full bg-accent-red grid place-items-center">
             <img
                 alt=""
