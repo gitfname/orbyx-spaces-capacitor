@@ -1,7 +1,7 @@
 
 
 import { cva, type VariantProps } from "class-variance-authority"
-import { HTMLAttributes } from "react"
+import React, { HTMLAttributes, ReactElement } from "react"
 import { twMerge } from "tailwind-merge"
 import { FileOptions } from "../../../types"
 import { Text } from "../.."
@@ -18,11 +18,13 @@ const variants = cva(
 )
 
 interface Props extends HTMLAttributes<HTMLDivElement>, VariantProps<typeof variants> {
-    data: FileOptions
+    data: FileOptions;
+    imgWrapper?: ReactElement;
+    imgClassName?: string;
 }
 
 
-function FileCard2({ data, className, colorSchema, ...props }: Props) {
+function FileCard2({ data, className, colorSchema, imgWrapper, imgClassName, ...props }: Props) {
     return (
         <div
             className={twMerge(variants({ className, colorSchema }))}
@@ -32,11 +34,33 @@ function FileCard2({ data, className, colorSchema, ...props }: Props) {
             <div
                 className="flex items-center justify-between gap-x-3"
             >
-                <img
-                    alt=""
-                    src={data.img}
-                    className="w-12 h-12 rounded-full object-center object-cover"
-                />
+                {
+                    imgWrapper
+                        ?
+                        React.cloneElement(imgWrapper, {}, <>
+                            {
+                                typeof data.img === "string"
+                                    ?
+                                    <img
+                                        alt=""
+                                        src={data.img}
+                                        className={twMerge("w-14 h-14 rounded-full object-center object-cover", imgClassName)}
+                                    />
+                                    :
+                                    data.img
+                            }
+                        </>)
+                        :
+                        typeof data.img === "string"
+                            ?
+                            <img
+                                alt=""
+                                src={data.img}
+                                className={twMerge("w-14 h-14 rounded-full object-center object-cover", imgClassName)}
+                            />
+                            :
+                            data.img
+                }
 
                 <Text
                     size="caption"
@@ -47,8 +71,8 @@ function FileCard2({ data, className, colorSchema, ...props }: Props) {
             </div>
 
             <div>
-                <Text size="subtitle2" className={colorSchema === "dark" ? "text-brand-3" :""}>{data.name}</Text>
-                <Text size="caption" className={`mt-1.5 text-brand-1 ${colorSchema === "dark" ? "text-brand-3/50" :""}`}>{data.date}</Text>
+                <Text size="subtitle2" className={colorSchema === "dark" ? "text-brand-3" : ""}>{data.name}</Text>
+                <Text size="caption" className={`mt-1.5 text-brand-1 ${colorSchema === "dark" ? "text-brand-3/50" : ""}`}>{data.date}</Text>
             </div>
 
 

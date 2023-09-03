@@ -1,7 +1,7 @@
 
 
 import { cva, type VariantProps } from "class-variance-authority"
-import React, { AllHTMLAttributes, HTMLAttributes, ReactElement, ReactHTMLElement, ReactNode } from "react"
+import React, { HTMLAttributes, ReactElement } from "react"
 import { twMerge } from "tailwind-merge"
 import { FileOptions } from "../../../types"
 import { Text } from "../.."

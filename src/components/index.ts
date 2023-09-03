@@ -7,6 +7,7 @@ import { FileCard1, FileCard2 } from "./File";
 import { DetailCard1, DetailCard2 } from "./Detail";
 import { FolderCard1 } from "./Folder";
 import InviteFriend from "./InviteFriend";
+import SortLienGrid from "./SortLienGrid";
 
 export {
     Text,
@@ -18,5 +19,6 @@ export {
     FileCard1, FileCard2,
     DetailCard1, DetailCard2,
     FolderCard1,
-    InviteFriend
+    InviteFriend,
+    SortLienGrid
 }

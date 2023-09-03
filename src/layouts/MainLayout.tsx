@@ -1,9 +1,13 @@
 
 import { ReactNode } from "react"
-import { Button, Text } from "../components"
+import { Text } from "../components"
 import getBaseUrl from "../utils/base-url"
-import { Link } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 import { ApplicationRoutes } from "../routes"
+
+// icons
+import { MdSpaceDashboard } from "react-icons/md"
+import { BsImages, BsFillFileEarmarkFill, BsCameraVideo, BsPersonFill, BsGearFill } from "react-icons/bs"
 
 interface Props {
     children: ReactNode
@@ -26,41 +30,78 @@ function MainLayout({ children }: Props) {
                     <Text size="head4">OrbyxSpaces</Text>
                 </div>
 
-                <Link
+                <NavLink
                     to={ApplicationRoutes.pages.dashboard}
+                    className={({ isActive }) => `w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
                 >
-                    <Button className="py-3 justify-start">
-                        <div className="w-7">
-                            <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Dashboard-White.png"} className="w-5 h-5" />
-                        </div>
-                        Dashboard
-                    </Button>
-                </Link>
+                    <div className="w-9">
+                        <MdSpaceDashboard className="w-5 h-5 fill-inherit" />
+                    </div>
+                    Dashboard
+                </NavLink>
 
-                <Link
+                <NavLink
                     to={ApplicationRoutes.pages.documents}
+                    className={({ isActive }) => `w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
                 >
-                    <Button className="py-3 shadow-none text-brand-1 hover:bg-brand hover:text-white justify-start" colorSchema="ghost">
-                        <div className="w-7">
-                            <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Image.png"} className="w-5 h-5" />
-                        </div>
-                        Documents
-                    </Button>
-                </Link>
+                    <div className="w-9">
+                        <BsFillFileEarmarkFill className="w-5 h-5 fill-inherit" />
+                    </div>
+                    Documents
+                </NavLink>
 
-                <Button className="py-3 shadow-none text-brand-1 hover:bg-brand hover:text-white justify-start" colorSchema="ghost">
-                    <div className="w-7">
-                        <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Image.png"} className="w-5 h-5" />
+                <NavLink
+                    to={ApplicationRoutes.pages.images}
+                    className={({ isActive }) => `w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
+                >
+                    <div className="w-9">
+                        <BsImages className="w-5 h-5 fill-inherit" />
                     </div>
                     Images
-                </Button>
+                </NavLink>
 
-                <Button className="py-3 shadow-none text-brand-1 hover:bg-brand hover:text-white justify-start" colorSchema="ghost">
-                    <div className="w-7">
-                        <img alt="" loading="lazy" src={getBaseUrl() + "/icons/Video.png"} className="w-5 h-5" />
+                <NavLink
+                    to={ApplicationRoutes.pages.videoAndAudio}
+                    className={({ isActive }) => `w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
+                >
+                    <div className="w-9">
+                        <BsCameraVideo className="w-5 h-5 fill-inherit" />
                     </div>
-                    Video & Audio
-                </Button>
+                    Audio & Video
+                </NavLink>
+
+                <NavLink
+                    to={ApplicationRoutes.pages.settings}
+                    className={({ isActive }) => `w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
+                >
+                    <div className="w-9">
+                        <BsGearFill className="w-5 h-5 fill-inherit" />
+                    </div>
+                    Settings
+                </NavLink>
+
+                <NavLink
+                    to={ApplicationRoutes.pages.profile}
+                    className={({ isActive }) => `mt-auto w-full text-sm font-medium py-3 px-4
+                    rounded-3xl active:scale-95 transition-all duration-300 flex items-center
+                    ${isActive ? "fill-white text-white bg-brand" : "text-brand-4/70 fill-brand-4/70"}`}
+                >
+                    <div className="w-9">
+                        <BsPersonFill className="w-5 h-5 fill-inherit" />
+                    </div>
+                    Profile
+                </NavLink>
+
             </div>
 
 
