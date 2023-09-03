@@ -6,6 +6,7 @@ export const ApplicationRoutes = {
         images: "/images",
         videoAndAudio: "/video-audio",
         settings: "/settings",
-        profile: "/settings/account"
+        profile: "/settings/account",
+        recentFiles: "/settings/recent-files"
     }
 }

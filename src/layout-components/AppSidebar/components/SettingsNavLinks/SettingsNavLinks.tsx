@@ -22,7 +22,7 @@ const links = [
     {
         id: "settings-link-2",
         text: "Recent Files",
-        link: ApplicationRoutes.pages.documents,
+        link: ApplicationRoutes.pages.recentFiles,
         icon: <div className="w-8 h-8 rounded-full bg-accent-green grid place-items-center">
             <img
                 alt=""
