@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import { ApplicationRoutes } from "./routes";
-import { Documents, Images } from "./pages";
+import { Documents, Images, Profile } from "./pages";
 import VideoAudio from "./pages/VideoAudio";
 
 
@@ -49,6 +49,11 @@ function App() {
           <Route
             path={ApplicationRoutes.pages.videoAndAudio}
             element={<VideoAudio />}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.profile}
+            element={<Profile />}
           />
 
         </Routes>

@@ -8,6 +8,7 @@ import { DetailCard1, DetailCard2 } from "./Detail";
 import { FolderCard1 } from "./Folder";
 import InviteFriend from "./InviteFriend";
 import SortLienGrid from "./SortLienGrid";
+import { AppNavLink, SettingsNavLink } from "./NavigationLinks";
 
 export {
     Text,
@@ -20,5 +21,6 @@ export {
     DetailCard1, DetailCard2,
     FolderCard1,
     InviteFriend,
-    SortLienGrid
+    SortLienGrid,
+    AppNavLink, SettingsNavLink
 }
