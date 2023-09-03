@@ -20,7 +20,7 @@ function ApplicationLayout({children}: Props) {
 
 
         {/* main section */}
-        <div className="bg-yellow-300 overflow-y-auto">
+        <div className="overflow-y-auto">
             {children}
         </div>
 
