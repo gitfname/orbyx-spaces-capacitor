@@ -1,5 +1,5 @@
 
-import { Button, FileCard1, FileCard2, InputField, Search, TextField } from "../../components"
+import { Button, DetailCard1, DetailCard2, FileCard1, FileCard2, InputField, Search, TextField } from "../../components"
 import { AiOutlineHome } from "react-icons/ai"
 import getBaseUrl from "../../utils/base-url"
 
@@ -40,6 +40,30 @@ function HomePage() {
           name: "App.apk",
           size: "301 MB"
         }}
+      />
+
+      <DetailCard1
+        img={getBaseUrl() + "/img/14.jpg"}
+        title="hello world and bye"
+        subtitle="2023/07/11 - aliopman@gmail.com"
+        className="w-full max-w-xs"
+        colorSchema="dark"
+      />
+
+      <DetailCard1
+        img={getBaseUrl() + "/img/14.jpg"}
+        title="hello world and bye"
+        subtitle="33 min"
+        className="w-full max-w-xs"
+        colorSchema="dark"
+      />
+
+      <DetailCard2
+        img={getBaseUrl() + "/img/14.jpg"}
+        title="hello world and bye op-man"
+        subtitle="5 Mins Remaining"
+        className="w-max"
+        value={33}
       />
     </div>
   )
