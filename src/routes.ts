@@ -7,6 +7,7 @@ export const ApplicationRoutes = {
         videoAndAudio: "/video-audio",
         settings: "/settings",
         profile: "/settings/account",
-        recentFiles: "/settings/recent-files"
+        recentFiles: "/settings/recent-files",
+        inviteFriend: "/settings/invite-friend"
     }
 }

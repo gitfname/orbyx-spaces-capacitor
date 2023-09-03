@@ -34,7 +34,7 @@ const links = [
     {
         id: "settings-link-3",
         text: "Invite a Friend",
-        link: ApplicationRoutes.pages.documents,
+        link: ApplicationRoutes.pages.inviteFriend,
         icon: <div className="w-8 h-8 rounded-full bg-accent-pink grid place-items-center">
             <img
                 alt=""

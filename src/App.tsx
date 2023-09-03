@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import MainLayout from "./layouts/MainLayout";
 import { ApplicationRoutes } from "./routes";
-import { Documents, Images, Profile, RecentFiles } from "./pages";
+import { Documents, Images, Profile, RecentFiles, InviteFriend } from "./pages";
 import VideoAudio from "./pages/VideoAudio";
 
 
@@ -59,6 +59,11 @@ function App() {
           <Route
             path={ApplicationRoutes.pages.recentFiles}
             element={<RecentFiles />}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.inviteFriend}
+            element={<InviteFriend />}
           />
 
         </Routes>
