@@ -1,6 +1,6 @@
 
 import { ApplicationRoutes } from "../../../../routes"
-import { BsArrowLeft, BsGearFill } from "react-icons/bs"
+import { BsArrowLeft } from "react-icons/bs"
 import { Button, SettingsNavLink } from "../../../../components"
 import { useNavigate } from "react-router-dom"
 import getBaseUrl from "../../../../utils/base-url"

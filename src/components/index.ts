@@ -9,6 +9,7 @@ import { FolderCard1 } from "./Folder";
 import InviteFriend from "./InviteFriend";
 import SortLienGrid from "./SortLienGrid";
 import { AppNavLink, SettingsNavLink } from "./NavigationLinks";
+import { AddContactModal } from "./Modals";
 
 export {
     Text,
@@ -22,5 +23,6 @@ export {
     FolderCard1,
     InviteFriend,
     SortLienGrid,
-    AppNavLink, SettingsNavLink
+    AppNavLink, SettingsNavLink,
+    AddContactModal
 }

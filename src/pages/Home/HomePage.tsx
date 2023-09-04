@@ -3,10 +3,13 @@ import { Button, DetailCard1, FolderCard1, Text } from "../../components"
 import getBaseUrl from "../../utils/base-url"
 import CircularSLider from "@fseehawer/react-circular-slider"
 import { AiOutlinePlus } from "react-icons/ai"
+import { useAddContactModalStore } from "../../components/Modals/stores"
 
 
 
 function HomePage() {
+  const setIsAddContactModalOpen = useAddContactModalStore(selector => selector.setIsAddContactModalOpen)
+
   return (
     <div className="w-full h-max p-4 bg-brand-3 rounded-3xl grid grid-cols-[5fr_3fr]">
 
@@ -86,7 +89,7 @@ function HomePage() {
 
             <Text size="head4" className="text-brand-4/90">Contact</Text>
 
-            <Button className="w-max rounded-full p-2 grid place-items-center">
+            <Button onClick={() => setIsAddContactModalOpen(true)} className="w-max rounded-full p-2 grid place-items-center">
               <AiOutlinePlus className="w-5 h-5 fill-white" />
             </Button>
 
