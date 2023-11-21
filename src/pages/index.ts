@@ -6,6 +6,11 @@ import RecentFiles from "./RecentFiles";
 import InviteFriend from "./InviteFriend";
 import Trash from "./Trash";
 import History from "./History";
+import VideoAudio from "./VideoAudio";
+import Storage from "./Storage";
+import Folder from "./Folder";
+import Activities from "./Activities";
+import UserProfile from "./UserProfile";
 
 export {
     Documents,
@@ -14,5 +19,10 @@ export {
     RecentFiles,
     InviteFriend,
     Trash,
-    History
+    History,
+    VideoAudio,
+    Storage,
+    Folder,
+    Activities,
+    UserProfile
 }

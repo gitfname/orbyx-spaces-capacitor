@@ -17,7 +17,7 @@ function InviteFriend() {
                 className="w-64 h-auto object-center object-cover block mx-auto mt-6"
             />
 
-            <div className="my-5 w-6/12 flex items-center justify-between mx-auto border border-dotted border-brand p-3 rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.075)]">
+            <div className="my-5 w-full md:w-6/12 flex items-center justify-between mx-auto border border-dotted border-brand p-3 rounded-xl shadow-[0_0_20px_rgba(0,0,0,0.075)]">
                 <Text size="subtitle2" className="text-brand-1">wurc27rc37thin1y9r7ct1</Text>
                 <Button className="w-max text-xs py-2">
                     Copy

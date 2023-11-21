@@ -9,10 +9,12 @@ interface Props {
 
 function MainLayout({ children }: Props) {
     return (
-        <div className="w-full h-screen grid grid-cols-[3fr_12.5fr] overflow-hidden">
+        <div className="w-full h-screen grid grid-cols-1 lg:grid-cols-[3fr_12.5fr] overflow-hidden">
 
             {/* sidebar */}
-            <AppSidebar />
+            <div className="max-lg:hidden">
+                <AppSidebar />
+            </div>
 
 
             {/* mmain sectosection */}

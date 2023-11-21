@@ -1,13 +1,29 @@
 
 import { Routes, Route } from "react-router-dom"
 import ApplicationLayout from "./layouts/ApplicationLayout";
-import { HomePage } from "./pages/Home";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import MainLayout from "./layouts/MainLayout";
 import { ApplicationRoutes } from "./routes";
-import { Documents, Images, Profile, RecentFiles, InviteFriend, Trash, History } from "./pages";
-import VideoAudio from "./pages/VideoAudio";
+
+// pages
+// import { HomePage } from "./pages/Home";
+// import { Documents, Images, Profile, RecentFiles, InviteFriend, Trash, History, Storage, Folder, Activities, UserProfile } from "./pages";
+// import VideoAudio from "./pages/VideoAudio";
+
+const HomePage = lazy(() => import("./pages/Home"))
+const Documents = lazy(() => import("./pages/Documents"))
+const Images = lazy(() => import("./pages/Images"))
+const Profile = lazy(() => import("./pages/Profile"))
+const RecentFiles = lazy(() => import("./pages/RecentFiles"))
+const InviteFriend = lazy(() => import("./pages/InviteFriend"))
+const Trash = lazy(() => import("./pages/Trash"))
+const History = lazy(() => import("./pages/History"))
+const VideoAudio = lazy(() => import("./pages/VideoAudio"))
+const Storage = lazy(() => import("./pages/Storage"))
+const Folder = lazy(() => import("./pages/Folder"))
+const Activities = lazy(() => import("./pages/Activities"))
+const UserProfile = lazy(() => import("./pages/UserProfile"))
 
 
 function App() {
@@ -33,47 +49,67 @@ function App() {
 
           <Route
             path={ApplicationRoutes.pages.dashboard}
-            element={<HomePage />}
+            element={<Suspense><HomePage /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.documents}
-            element={<Documents />}
+            element={<Suspense><Documents /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.images}
-            element={<Images />}
+            element={<Suspense><Images /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.videoAndAudio}
-            element={<VideoAudio />}
+            element={<Suspense><VideoAudio /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.profile}
-            element={<Profile />}
+            element={<Suspense><Profile /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.recentFiles}
-            element={<RecentFiles />}
+            element={<Suspense><RecentFiles /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.inviteFriend}
-            element={<InviteFriend />}
+            element={<Suspense><InviteFriend /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.trashBin}
-            element={<Trash />}
+            element={<Suspense><Trash /></Suspense>}
           />
 
           <Route
             path={ApplicationRoutes.pages.history}
-            element={<History />}
+            element={<Suspense><History /></Suspense>}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.folders}
+            element={<Suspense><Storage /></Suspense>}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.folder}
+            element={<Suspense><Folder /></Suspense>}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.activities}
+            element={<Suspense><Activities /></Suspense>}
+          />
+
+          <Route
+            path={ApplicationRoutes.pages.users}
+            element={<Suspense><UserProfile /></Suspense>}
           />
 
         </Routes>

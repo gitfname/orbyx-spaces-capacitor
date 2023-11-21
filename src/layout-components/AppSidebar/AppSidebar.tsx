@@ -11,10 +11,10 @@ function AppSidebar() {
     const location = useLocation();
 
     return (
-        <div className="bg-white h-screen overflow-y-auto grid grid-cols-1
-    grid-rows-[4.4rem_1fr]">
+        <div className="bg-white max-lg:h-full h-screen overflow-y-auto grid grid-cols-1
+        grid-rows-1 lg:grid-rows-[4.4rem_1fr]">
 
-            <div className="w-full h-[4.4rem] shadow-sm shadow-black/5 mb-3 grid place-items-center">
+            <div className="w-full h-[4.4rem] shadow-sm shadow-black/5 mb-3 grid place-items-center max-lg:hidden">
                 <Link to={ApplicationRoutes.pages.dashboard} className="flex items-center gap-x-1 justify-center">
                     <img
                         alt=""
@@ -26,7 +26,7 @@ function AppSidebar() {
                 </Link>
             </div>
 
-            <div className="flex flex-col gap-y-2 py-4 px-4 overflow-y-auto">
+            <div className="flex flex-col gap-y-2 py-4 lg:px-4 overflow-y-auto">
 
                 {
                     !location.pathname.includes(ApplicationRoutes.pages.settings)

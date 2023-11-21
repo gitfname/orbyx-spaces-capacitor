@@ -6,7 +6,11 @@ import getBaseUrl from "../../../utils/base-url"
 import { Text } from "../.."
 
 const variants = cva(
-    `w-full grid grid-cols-1 grid-rows-1 appearance-none outline-none relative`
+    `w-full grid grid-cols-1 select-none grid-rows-1 appearance-none outline-none relative`
+)
+
+const imgVariants = cva(
+    `w-5 h-5 object-center object-cover`
 )
 
 interface Props extends HTMLAttributes<HTMLButtonElement>, VariantProps<typeof variants> {
@@ -16,9 +20,10 @@ interface Props extends HTMLAttributes<HTMLButtonElement>, VariantProps<typeof v
     colorSchema?: "dark";
     iconColor: string;
     icon: string;
+    imgClassName?: string;
 }
 
-function FolderCard1({ className, size, lastUpdateTime, icon, name, colorSchema, iconColor, ...props }: Props) {
+function FolderCard1({ className, imgClassName, size, lastUpdateTime, icon, name, colorSchema, iconColor, ...props }: Props) {
     return (
         <button
             {...props}
@@ -30,7 +35,7 @@ function FolderCard1({ className, size, lastUpdateTime, icon, name, colorSchema,
                 <img
                     alt=""
                     src={icon}
-                    className="w-5 h-5 object-center object-cover"
+                    className={twMerge(imgVariants({className: imgClassName}))}
                 />
             </div>
 

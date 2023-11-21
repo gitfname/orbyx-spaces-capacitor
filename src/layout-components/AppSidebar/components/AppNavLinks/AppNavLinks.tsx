@@ -4,6 +4,7 @@ import { ApplicationRoutes } from "../../../../routes"
 import { BsCameraVideo, BsFillFileEarmarkFill, BsGearFill, BsImages } from "react-icons/bs"
 import { AppNavLink, Button } from "../../../../components"
 import { useNavigate } from "react-router-dom"
+import { AiOutlinePieChart } from "react-icons/ai"
 
 
 const links = [
@@ -30,6 +31,12 @@ const links = [
         text: "Video & Audio",
         link: ApplicationRoutes.pages.videoAndAudio,
         icon: <BsCameraVideo className="w-5 h-5 fill-inherit" />
+    },
+    {
+        id: "app-nav-link-5",
+        text: "Activities",
+        link: ApplicationRoutes.pages.activities,
+        icon: <AiOutlinePieChart className="w-5 h-5 fill-inherit" />
     }
 ]
 

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "OrbyxSpaces",
+    "version": "1.0",
+    "description": "Cloud Storage Solution. by Orbyx",
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ],
+    "icons": {
+      "48": "Logo.png",
+      "128": "Logo.png"
+    },
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_panel": "index.html"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "/*"
+        ],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
+  }

@@ -5,28 +5,65 @@ import getBaseUrl from "../../utils/base-url"
 
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react"
 import { MdLogout } from "react-icons/md"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ApplicationRoutes } from "../../routes"
+import { useUploadQueueStore } from "../../stores"
 
 function NavBar() {
 
     const navigate = useNavigate()
+    const addFilesToFilesQueue = useUploadQueueStore(selector => selector.addNewFile)
 
     return (
         <div className="w-full flex items-center justify-between px-4 md:px-8 h-full shadow-sm shadow-black/5">
 
-            <Search searchFieldAttrs={{ placeholder: "Search ...", className: "border-none py-3" }} className="max-w-sm rounded-3xl shadow-[0_0_20px_rgba(0,0,0,0.08)]" />
+            <Search searchFieldAttrs={{ placeholder: "Search ...", className: "border-none py-3" }} className="max-w-sm max-lg:hidden rounded-3xl shadow-[0_0_20px_rgba(0,0,0,0.08)]" />
 
             <div className="flex items-center gap-x-10">
-                <Button className="px-6 shadow-lg shadow-black/10 py-3">
+            <Link to={ApplicationRoutes.pages.dashboard} className="flex mr-0 flex-shrink-0 items-center gap-x-1 justify-center lg:hidden">
+                    <img
+                        alt=""
+                        loading="lazy"
+                        src={getBaseUrl() + "/Logo.png"}
+                        className="w-10 h-10"
+                    />
+                    <Text size="head4">OrbyxSpaces</Text>
+                </Link>
+
+                <input
+                    type="file"
+                    multiple
+                    className="appearance-none hidden" id="development-upload-file"
+                    onChange={(e) => {
+                        if(e.target.files && e.target.files?.length > 0) {
+                            for (const file of e.target.files) {
+                                addFilesToFilesQueue({
+                                    id: file.name + file.size,
+                                    date: file.lastModified.toString(),
+                                    img: "",
+                                    name: file.name,
+                                    size: file.size.toString(),
+                                    type: "image/jpeg",
+                                    progress: 0,
+                                    file
+                                })
+                            }
+                        }
+                    }}
+                />
+                <Button
+                    className="px-6 shadow-lg shadow-black/10 py-3 max-md:hidden"
+                    onClick={() => document.getElementById("development-upload-file")?.click()}
+                >
                     <img loading="lazy" className="w-5 h-5 object-center object-cover" alt="" src={getBaseUrl() + "/icons/Upload-White.png"} />
                     Upload
                 </Button>
 
+
                 <Menu>
 
                     <MenuButton className="flex-shrink-0">
-                        <div className="flex items-center gap-x-3">
+                        <div className="flex items-center gap-x-3 max-md:hidden">
                             <img
                                 alt=""
                                 loading="lazy"

@@ -1,6 +1,6 @@
 
 import { cva, type VariantProps } from "class-variance-authority"
-import { HTMLAttributes } from "react"
+import { forwardRef, HTMLAttributes } from "react"
 import { twMerge } from "tailwind-merge"
 
 const variants = cva(
@@ -20,14 +20,15 @@ const variants = cva(
 
 interface Props extends HTMLAttributes<HTMLInputElement>, VariantProps<typeof variants> { }
 
-function TextField({ className, colorSchema, ...props }: Props) {
+const TextField = forwardRef<HTMLInputElement, Props>(({ className, colorSchema, ...props }: Props, ref) => {
   return (
     <input
       className={twMerge(variants({ className, colorSchema }))}
       type="text"
       {...props}
+      ref={ref}
     />
   )
-}
+})
 
 export default TextField

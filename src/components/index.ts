@@ -9,7 +9,12 @@ import { FolderCard1 } from "./Folder";
 import InviteFriend from "./InviteFriend";
 import SortLienGrid from "./SortLienGrid";
 import { AppNavLink, SettingsNavLink } from "./NavigationLinks";
-import { AddContactModal } from "./Modals";
+import { AddContactModal, UploadModal, AddNewStorage } from "./Modals";
+import GoBackBtn from "./GoBackBtn";
+import PowerdBy from "./PowerdBy";
+import UploadedFileCard from "./UploadedFileCard";
+import Droppable from "./Droppable";
+import RecentActivites from "./RecentActivites";
 
 export {
     Text,
@@ -24,5 +29,10 @@ export {
     InviteFriend,
     SortLienGrid,
     AppNavLink, SettingsNavLink,
-    AddContactModal
+    AddContactModal, UploadModal, AddNewStorage,
+    GoBackBtn,
+    PowerdBy,
+    UploadedFileCard,
+    Droppable,
+    RecentActivites
 }

@@ -1,5 +1,5 @@
 
-import { Button, InputField, Text, TextField } from "../../components"
+import { Button, InputField, RecentActivites, Text, TextField } from "../../components"
 import getBaseUrl from "../../utils/base-url"
 
 function Profile() {
@@ -13,7 +13,7 @@ function Profile() {
                 className="w-40 h-40 rounded-full object-center object-cover shadow-md shadow-black/10 mt-8"
             />
 
-            <div className="w-full grid grid-cols-2 gap-6 mt-8">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                 <InputField labelText="Full Name" className="max-w-none rounded-xl pb-2">
                     <TextField placeholder="Enter you full name" className="outline-none" />
                 </InputField>
@@ -36,7 +36,9 @@ function Profile() {
                     Cancel
                 </Button>
             </div>
-
+            <div className="w-full h-96 mt-20">
+                <RecentActivites />
+            </div>
         </div>
     )
 }

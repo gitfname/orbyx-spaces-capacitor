@@ -7,7 +7,7 @@ import { FileOptions } from "../../../types"
 import { Text } from "../.."
 
 const variants = cva(
-    `py-2.5 px-4 rounded-xl flex items-center justify-between border border-black/10`,
+    `py-2.5 px-4 rounded-xl select-none flex items-center justify-between border border-black/10`,
     {
         variants: {
             colorSchema: {

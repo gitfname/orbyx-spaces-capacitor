@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge"
 import { Text } from "../.."
 
 const variants = cva(
-    `py-2.5 px-4 rounded-xl flex items-center gap-x-5 border border-black/10`,
+    `py-2.5 px-4 rounded-xl select-none flex items-center gap-x-5 border border-black/10`,
     {
         variants: {
             colorSchema: {

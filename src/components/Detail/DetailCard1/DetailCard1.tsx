@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge"
 import { Text } from "../..";
 
 const variants = cva(
-    `w-full p-2 rounded-xl border border-black/10 flex items-center justify-between gap-x-3`,
+    `w-full p-2 rounded-xl select-none border border-black/10 flex items-center justify-between gap-x-3`,
     {
         variants: {
             colorSchema: {
@@ -34,7 +34,7 @@ function DetailCard1({ img, title, subtitle, className, colorSchema, subtitleSlo
                 <img
                     alt=""
                     src={img}
-                    className="w-12 h-12 rounded-full object-center object-cover"
+                    className="w-12 h-12 rounded-full object-center object-cover flex-shrink-0"
                 />
                 <div>
                     <Text size="subtitle2" className={colorSchema === "dark" ? "text-brand-3" : "text-brand-4"}>{title}</Text>
@@ -51,7 +51,7 @@ function DetailCard1({ img, title, subtitle, className, colorSchema, subtitleSlo
             {
                 subtitleSlot === "end"
                     ?
-                    <Text size="caption" className={colorSchema === "dark" ? "text-brand-3/50" : "text-brand-4"}>{subtitle}</Text>
+                    <Text size="caption" className={`flex-shrink-0 ${colorSchema === "dark" ? "text-brand-3/50" : "text-brand-4"}`}>{subtitle}</Text>
                     :
                     null
             }
